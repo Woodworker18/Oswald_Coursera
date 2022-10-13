@@ -35,7 +35,7 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  printf("Hello Hello");	
+  printf("Hello Hello AGAIN");	
 
   for (unsigned int i = 0; i < SIZE; ++i)
   {
