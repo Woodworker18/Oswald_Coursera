@@ -36,5 +36,13 @@
  * @return <Add Return Informaiton here>
  */
 
+unsigned char sort_array(unsigned char *array ,unsigned int n);
+/*
+ * @brief Takes an array of lenghth n and sorts elements in ascending order
+ * 
+ * This 
+ */
+
+
 
 #endif /* __STATS_H__ */

@@ -9,14 +9,14 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c 
+ * @brief Outputs simple statistical information about an array
  *
- * <Add Extended Description Here>
+ * This program prints the median, mean, maximum, and minimum of a data set and displays the 
+ * data set in ascending order.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
- *
+ * @author Doug Oswald
+ * @date   10/10/22
  */
 
 
@@ -35,8 +35,19 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
+  printf("Hello Hello");	
+
+  for (unsigned int i = 0; i < SIZE; ++i)
+  {
+  	printf("%i\n",test[i]);
+  }
+
+
+
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
+
+  return;
 
 }
 
