@@ -24,6 +24,10 @@
 #include <stdio.h>
 #include "stats.h"
 
+
+unsigned char maximum(unsigned char num[], unsigned char len);
+
+
 /* Size of the Data Set */
 #define SIZE (40)
 
@@ -34,26 +38,10 @@ void main() {
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
+  unsigned char max = 0;
 
-  printf("Hello Hello AGAIN");
-  printf("\n");	
-
-  for (unsigned int i = 0; i < SIZE; ++i)
-  {
-  	printf("%i\n",test[i]);
-  }
-
-  int tmp = test[0];
-  for (unsigned int j = 1; j < SIZE; ++j)
-  {
-    if (test[j]>tmp)
-    {
-    	tmp=test[j];
-        printf("%i\n",test[j]);
-    }  	
-  }
-  printf("Maximum = %i\n",tmp);
-
+  max = maximum(test,SIZE); 
+  printf("%i\n",max);
 
   /* Other Variable Declarations Go Here */
   /* Statistics and Printing Functions Go Here */
@@ -62,4 +50,27 @@ void main() {
 
 }
 
-/* Add other Implementation File Code Here */
+
+unsigned char maximum(unsigned char num[], unsigned char len) {
+
+  printf("Hello Hello AGAIN");
+  printf("\n");	
+
+  for (unsigned int i = 0; i < len; ++i)
+  {
+  	printf("%i\n",num[i]);
+  }
+
+  int tmp = num[0];
+  for (unsigned int j = 1; j < len; ++j)
+  {
+    if (num[j]>tmp)
+    {
+    	tmp=num[j];
+        printf("%i\n",num[j]);
+    }  	
+  }
+  printf("Maximum = %i\n",tmp);
+ 
+  return (0);
+}
