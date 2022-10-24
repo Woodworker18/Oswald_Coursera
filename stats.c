@@ -28,6 +28,7 @@
 unsigned char maximum(unsigned char num[], unsigned char len);
 unsigned char minimum(unsigned char num[], unsigned char len);
 unsigned char mean(unsigned char num[], unsigned char len);
+unsigned char[] sort(unsigned char num[], unsigned char len); 
 
 
 /* Size of the Data Set */
@@ -107,6 +108,19 @@ unsigned char mean(unsigned char num[], unsigned char len) {
   return(avg);
 }
 
+unsigned char[] sort(unsigned char num[], unsigned char len) {
+
+  unsigned char tmp = num[0];
+  for(unsigned char j = 0 ; j<len ; ++j){
+
+    for(unsigned char k = j+1 ; k<len ; ++k){
+    
+    if(num[j]>num[k]) {}
+   
+    }    
+
+  }
+}
 
 
 /*
