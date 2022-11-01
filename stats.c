@@ -28,7 +28,7 @@
 unsigned char maximum(unsigned char num[], unsigned char len);
 unsigned char minimum(unsigned char num[], unsigned char len);
 unsigned char mean(unsigned char num[], unsigned char len);
-unsigned char[] sort(unsigned char num[], unsigned char len); 
+unsigned char * sort(unsigned char num[], unsigned char len); 
 
 
 /* Size of the Data Set */
@@ -44,6 +44,9 @@ void main() {
   unsigned char max = 0;
   unsigned char min = 0;
   unsigned char avg = 0;
+  unsigned char *p;
+  
+  
 
   max = maximum(test,SIZE); 
   printf("Maximum = %i\n",max);
@@ -51,6 +54,14 @@ void main() {
   printf("Minimum = %i\n",min);
   avg = mean(test,SIZE);
   printf("Mean = %i\n",avg);
+  p = sort(test,SIZE);
+
+  
+  for (unsigned char i = 0; i < SIZE; i += 1){
+   printf("%i\n",p[i]);	
+  }
+  
+
   
 
   /* Other Variable Declarations Go Here */
@@ -108,19 +119,28 @@ unsigned char mean(unsigned char num[], unsigned char len) {
   return(avg);
 }
 
-unsigned char[] sort(unsigned char num[], unsigned char len) {
+unsigned char * sort(unsigned char num[], unsigned char len) {
 
-  unsigned char tmp = num[0];
-  for(unsigned char j = 0 ; j<len ; ++j){
+    unsigned char tmp = num[0];
+  
+for(unsigned char i = 0 ; i<len ; ++i){
 
-    for(unsigned char k = j+1 ; k<len ; ++k){
+    for(unsigned char j = i+1 ; j<len ; ++j){
     
-    if(num[j]>num[k]) {}
-   
-    }    
+      if(num[i]>num[j]) {
+      tmp = num[i];
+      num[i] = num[j];
+      num[j] = tmp;
 
+      }
+    }
   }
-}
+
+
+  return num;   
+}    
+
+
 
 
 /*
